@@ -1,0 +1,465 @@
+/* General Reset */
+/* Resetting margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's width and height */
+}
+
+/* Styling for the body */
+/* Setting a default font and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Light gray background */
+    color: #333; /* Dark gray text color */
+}
+
+/* Header Section */
+/* Main header styling */
+header {
+    background-color: #4CAF50; /* Green background for the header */
+    color: white; /* White text for visibility */
+    text-align: center; /* Centered text alignment */
+    padding: 20px 0; /* Padding for spacing */
+}
+
+/* Header text styling */
+/* Styling the main heading inside the header */
+header h1 {
+    font-size: 2.5rem; /* Large font size for prominence */
+}
+
+/* Navigation */
+/* Styling the navigation bar */
+nav {
+    background-color: #333; /* Dark background for contrast */
+    text-align: center; /* Centered alignment for the navigation */
+}
+
+/* Navigation list styling */
+/* Removing bullets and adding inline layout */
+nav ul {
+    list-style: none; /* No bullet points */
+}
+
+/* Individual navigation items */
+/* Inline display with spacing between items */
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* Spacing on both sides of items */
+}
+
+/* Navigation links */
+/* Styling the links in the navigation */
+nav ul li a {
+    color: white; /* White text for visibility */
+    text-decoration: none; /* Removing underline */
+    font-size: 1.1rem; /* Slightly larger font size */
+    padding: 8px 16px; /* Adding padding around the text */
+}
+
+/* Hover effect for links */
+/* Styling when user hovers over navigation links */
+nav ul li a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hero Section */
+/* Styling the hero section for emphasis */
+.hero {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center alignment for content */
+    padding: 80px 20px; /* Spacing for a large section */
+}
+
+/* Hero section heading */
+/* Styling the hero heading text */
+.hero h2 {
+    font-size: 2rem; /* Large font for importance */
+    margin-bottom: 10px; /* Spacing below heading */
+}
+
+/* Hero section paragraph */
+/* Styling text inside the hero section */
+.hero p {
+    font-size: 1.2rem; /* Medium font size for readability */
+    margin-bottom: 20px; /* Spacing below paragraph */
+}
+
+/* Hero section button */
+/* Styling buttons in the hero section */
+.hero .btn {
+    background-color: #fff; /* White background for contrast */
+    color: #4CAF50; /* Green text for branding */
+    padding: 10px 20px; /* Padding for clickability */
+    font-size: 1.2rem; /* Medium font size */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    text-decoration: none; /* Removing underline from links styled as buttons */
+}
+
+/* Button hover effect */
+/* Enhancing interaction feedback for the button */
+.hero .btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Form Section */
+/* Styling the section containing forms */
+.form-section {
+    padding: 40px 20px; /* Padding around the section */
+    display: flex; /* Flexbox layout for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center align text */
+    height: 100vh; /* Full viewport height for section */
+}
+/* Heading inside the form section */
+/* Styling the title of the form section */
+.form-section h2 {
+    font-size: 24px; /* Medium font size for visibility */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Form container */
+/* Styling the overall form element */
+.form-section form {
+    display: flex; /* Flexbox for vertical layout */
+    flex-direction: column; /* Stack fields on top of each other */
+    gap: 15px; /* Space between form fields */
+    background-color: white; /* White background for form contrast */
+    padding: 30px; /* Inner spacing for form content */
+    border-radius: 8px; /* Rounded corners for aesthetic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    width: 100%; /* Full width within constraints */
+    max-width: 400px; /* Limiting form width */
+    text-align: left; /* Left-align text inside form */
+}
+
+/* Form labels */
+/* Styling the labels for each input field */
+.form-section form label {
+    font-size: 1.1rem; /* Slightly larger font for readability */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Input fields */
+/* Styling the input boxes for user entries */
+.form-section form input {
+    padding: 10px; /* Padding for better usability */
+    font-size: 1rem; /* Standard font size for text */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Submit button */
+/* Styling the form submission button */
+.form-section form button {
+    padding: 10px; /* Spacing for clickability */
+    background-color: #4CAF50; /* Green background for branding */
+    color: white; /* White text for contrast */
+    border: none; /* Removing default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor to indicate action */
+    font-size: 1.1rem; /* Slightly larger text size */
+}
+
+/* Submit button hover effect */
+/* Enhancing the interaction of the button */
+.form-section form button:hover {
+    background-color: #45a049; /* Darker green for hover feedback */
+}
+
+/* Password container */
+/* Wrapping input and toggle for password visibility */
+.password-container {
+    position: relative; /* For positioning toggle button inside */
+    display: flex; /* Flex layout for alignment */
+    align-items: center; /* Center alignment for elements */
+}
+
+/* Password input field */
+/* Styling the password input box */
+.password-container input {
+    padding: 10px; /* Padding for usability */
+    font-size: 1rem; /* Standard font size */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border */
+    width: 100%; /* Full width for container */
+}
+
+/* Password toggle button */
+/* Styling the button to toggle password visibility */
+.password-container button {
+    position: absolute; /* Positioned within the container */
+    right: 10px; /* Right alignment inside container */
+    background: none; /* No background for clean look */
+    border: none; /* No border */
+    font-size: 1.5rem; /* Large size for visibility */
+    cursor: pointer; /* Pointer cursor for action */
+    color: #333; /* Neutral gray color */
+}
+
+/* Password toggle hover effect */
+/* Styling hover state for visibility button */
+.password-container button:hover {
+    color: #4CAF50; /* Green color to indicate interactivity */
+}
+
+/* Product List Section */
+/* Styling the container for product listings */
+#productList {
+    display: flex; /* Flexbox for flexible layout */
+    flex-wrap: wrap; /* Wrap items onto new rows */
+    justify-content: center; /* Center alignment */
+    gap: 20px; /* Space between product items */
+    padding: 40px 20px; /* Padding around the section */
+}
+
+/* Individual product item */
+/* Styling each product card */
+.product-item {
+    background-color: white; /* White background for contrast */
+    padding: 20px; /* Inner spacing for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: center; /* Center-align text */
+    width: 250px; /* Fixed width for uniformity */
+}
+
+/* Product title */
+/* Styling the product name */
+.product-item h3 {
+    font-size: 1.2rem; /* Medium font size for emphasis */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Product description */
+/* Styling the description text */
+.product-item p {
+    font-size: 1rem; /* Standard font size */
+    margin-bottom: 10px; /* Space below description */
+}
+
+/* Product button */
+/* Styling the action button for products */
+.product-item button {
+    background-color: #4CAF50; /* Green background for action */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Padding for clickability */
+    border: none; /* No border for clean look */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    font-size: 1rem; /* Standard font size */
+}
+
+/* Product button hover */
+/* Hover effect for product action buttons */
+.product-item button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+/* Responsive Design */
+/* Media query for devices with width up to 768px */
+@media screen and (max-width: 768px) {
+    /* Hero section adjustments */
+    .hero {
+        padding: 50px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem; /* Slightly smaller font for headings */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust font size for readability */
+    }
+
+    /* Form adjustments */
+    .form-section form {
+        max-width: 90%; /* Increase width for smaller devices */
+    }
+
+    /* Product list adjustments */
+    #productList {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .product-item {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
+
+/* Media query for devices with width up to 480px */
+@media screen and (max-width: 480px) {
+    /* Header adjustments */
+    header h1 {
+        font-size: 1.8rem; /* Smaller font size for headings */
+    }
+
+    /* Navigation adjustments */
+    nav ul li {
+        display: block; /* Stack items vertically */
+        margin: 10px 0; /* Add spacing between items */
+    }
+
+    /* Product item adjustments */
+    .product-item {
+        width: 100%; /* Full width for smallest screens */
+    }
+}
+
+/* Carousel Container Styles */
+/* Styling the container for carousel images */
+.carousel-container {
+    position: relative; /* Position relative for overlay elements */
+    max-width: 500px; /* Limit maximum width */
+    margin: 20px auto; /* Center the container */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Carousel */
+/* Styling the image container for sliding effect */
+.carousel {
+    display: flex; /* Flex layout for sliding effect */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+/* Individual slides */
+/* Styling each slide inside the carousel */
+.carousel-slide {
+    width: 100%; /* Full width for each slide */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image fits within bounds */
+}
+
+/* Navigation buttons */
+/* Styling the carousel navigation buttons */
+.carousel-container button {
+    position: absolute; /* Positioned within the container */
+    top: 50%; /* Vertically center buttons */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* White text for contrast */
+    border: none; /* Remove default border */
+    font-size: 24px; /* Large font size for visibility */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    padding: 10px; /* Padding for better usability */
+    z-index: 10; /* Ensure buttons appear above slides */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+    transform: translateY(-50%); /* Adjust position for centering */
+}
+
+/* Previous button */
+/* Position the previous button on the left */
+.carousel-container .prev {
+    left: 10px; /* Offset from the left edge */
+}
+
+/* Next button */
+/* Position the next button on the right */
+.carousel-container .next {
+    right: 10px; /* Offset from the right edge */
+}
+
+/* Button hover effect */
+/* Enhance interactivity for carousel buttons */
+.carousel-container button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Skills Section */
+/* Styling the skills display section */
+.skills-section {
+    padding: 20px; /* Padding around the section */
+}
+
+/* Search filter container */
+/* Styling the container for the search filter */
+.search-filter {
+    display: flex; /* Flex layout for alignment */
+    justify-content: center; /* Center-align elements */
+    margin-bottom: 20px; /* Space below the filter */
+}
+
+/* Search input field */
+/* Styling the search box */
+.search-filter input {
+    width: 300px; /* Fixed width for input */
+    padding: 10px; /* Padding for better usability */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Search button */
+/* Styling the search action button */
+.search-filter button {
+    padding: 10px 15px; /* Padding for clickability */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for action */
+}
+
+/* Search button hover effect */
+/* Interaction feedback for search button */
+.search-filter button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Skills grid */
+/* Styling the grid layout for skill cards */
+.skills-list {
+    display: grid; /* Grid layout for items */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual skill card */
+/* Styling each card in the skills list */
+.skill-card {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Inner spacing for content */
+    text-align: center; /* Center-align text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Skill title */
+/* Styling the skill name */
+.skill-card h3 {
+    margin: 0 0 10px; /* Space below the title */
+}
+
+/* Skill description */
+/* Styling description text */
+.skill-card p {
+    margin: 5px 0; /* Space around paragraphs */
+}
+
+/* Skill action button */
+/* Styling the button for skill actions */
+.skill-card button {
+    padding: 10px 15px; /* Padding for usability */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text for contrast */
+    border: none; /* No border for clean look */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for action */
+}
+
+/* Button hover effect */
+/* Interaction feedback for skill buttons */
+.skill-card button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+
+/* Footer Section */
+/* Styling the page footer */
+footer {
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Padding for spacing */
+    background-color: #333; /* Dark background */
+    color: white; /* White text for contrast */
+}

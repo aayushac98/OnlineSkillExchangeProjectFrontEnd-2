@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifying character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Making the page responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta description for search engines -->
+    <meta name="description" content="View and manage your profile on the Online Skill Exchange platform.">
+    <!-- Keywords for SEO optimization -->
+    <meta name="keywords" content="Profile, User Information, Skill Exchange">
+    <!-- Title of the webpage -->
+    <title>Your Profile</title>
+    <!-- Linking external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linking external JavaScript file -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Main heading for the profile page -->
+        <h1>Welcome to Your Profile</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav aria-label="Main navigation">
+        <!-- Unordered list for navigation links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> <!-- Link to Home Page -->
+            <li><a href="register.html">Register</a></li> <!-- Link to Registration Page -->
+            <li><a href="login.html">Login</a></li> <!-- Link to Login Page -->
+            <li><a href="products.html">Explore Skills</a></li> <!-- Link to Skills Page -->
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <!-- Subheading for the profile section -->
+        <h2>Profile Information</h2>
+        <!-- Display user's name -->
+        <p id="profileName">Name: <span id="displayName">Loading...</span></p>
+        <!-- Display user's email -->
+        <p id="profileEmail">Email: <span id="displayEmail">Loading...</span></p>
+
+        <!-- Profile action buttons -->
+        <div class="profile-actions">
+            <!-- Button to edit the profile -->
+            <a href="#" id="editProfileBtn" class="btn">Edit Profile</a>
+            <!-- Button to log out -->
+            <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+        <!-- Link to explore available skills -->
+        <a href="products.html" class="btn">Explore Skills</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer copyright -->
+        <p>&copy; 2024 Online Skill Exchange. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Wait for the DOM to load before executing script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example user data (replace with actual data retrieval mechanism)
+            const userData = {
+                // Retrieve user's name from localStorage or use a default value
+                name: localStorage.getItem('userName') || 'Aayush Acharya',
+                // Retrieve user's email from localStorage or use a default value
+                email: localStorage.getItem('userEmail') || 'acharyaayush.np189@gmail.com'
+            };
+
+            // Update the displayed name in the profile
+            document.getElementById('displayName').textContent = userData.name;
+            // Update the displayed email in the profile
+            document.getElementById('displayEmail').textContent = userData.email;
+
+            // Add event listener for the Logout button
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                // Remove user's name and email from localStorage
+                localStorage.removeItem('userName');
+                localStorage.removeItem('userEmail');
+
+                // Redirect to the login page
+                window.location.href = 'login.html';
+            });
+
+            // Add event listener for the Edit Profile button
+            document.getElementById('editProfileBtn').addEventListener('click', function() {
+                // Display a temporary alert (replace with actual functionality)
+                alert('Feature Coming Soon!');
+            });
+        });
+    </script>
+</body>
+</html>

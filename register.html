@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Make the page responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Provide a brief description of the page for search engines -->
+    <meta name="description" content="Register to join the Online Skill Exchange and start exchanging skills with others.">
+    <!-- Add relevant keywords for SEO -->
+    <meta name="keywords" content="Register, Sign Up, Skill Exchange, Online Learning">
+    <!-- Title of the webpage -->
+    <title>Register</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to external JavaScript file -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header section for page title -->
+    <header>
+        <h1>Register</h1> <!-- Main heading for the register page -->
+    </header>
+
+    <!-- Navigation menu for the website -->
+    <nav aria-label="Main navigation">
+        <ul class="nav-links">
+            <!-- Link to the home page -->
+            <li><a href="index.html">Home</a></li>
+            <!-- Highlighted link to the current register page -->
+            <li><a href="register.html">Register</a></li>
+            <!-- Link to the login page -->
+            <li><a href="login.html">Login</a></li>
+            <!-- Link to explore skills -->
+            <li><a href="products.html">Explore Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section containing the registration form -->
+    <section class="form-section">
+        <!-- Subheading for the registration form -->
+        <h2>Create Your Account</h2> <!-- Gives context to the form -->
+
+        <!-- Registration form -->
+        <form id="registerForm" autocomplete="off" onsubmit="return validateForm()">
+            <!-- Input field for user name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required aria-required="true" autocomplete="name">
+
+            <!-- Input field for email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true" autocomplete="email">
+
+            <!-- Input field for password -->
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <!-- Password field -->
+                <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true" autocomplete="new-password" minlength="8">
+                <!-- Button to toggle password visibility -->
+                <button type="button" id="togglePassword" class="eye-icon" aria-label="Show/Hide Password">&#128065;</button>
+            </div>
+
+            <!-- Input field to confirm password -->
+            <label for="confirmPassword">Re-type Password:</label>
+            <div class="password-container">
+                <!-- Confirm password field -->
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-type your password" required aria-required="true" autocomplete="new-password">
+                <!-- Button to toggle confirm password visibility -->
+                <button type="button" id="toggleConfirmPassword" class="eye-icon" aria-label="Show/Hide Confirm Password">&#128065;</button>
+            </div>
+
+            <!-- Submit button for the form -->
+            <button type="submit">Register</button>
+            <!-- Display error messages dynamically -->
+            <p id="errorMessage" class="error-message" style="display:none; color:red;"></p>
+        </form>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2024 Online Skill Exchange. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript code for functionality -->
+    <script>
+        // Add functionality to toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            // Get the password input field
+            const password = document.getElementById('password');
+            // Toggle between 'password' and 'text' types
+            if (password.type === 'password') {
+                password.type = 'text'; // Show the password
+                this.innerHTML = '&#128065;'; // Update the icon
+            } else {
+                password.type = 'password'; // Hide the password
+                this.innerHTML = '&#128065;'; // Update the icon
+            }
+        });
+
+        // Add functionality to toggle confirm password visibility
+        document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
+            // Get the confirm password input field
+            const confirmPassword = document.getElementById('confirmPassword');
+            // Toggle between 'password' and 'text' types
+            if (confirmPassword.type === 'password') {
+                confirmPassword.type = 'text'; // Show the password
+                this.innerHTML = '&#128065;'; // Update the icon
+            } else {
+                confirmPassword.type = 'password'; // Hide the password
+                this.innerHTML = '&#128065;'; // Update the icon
+            }
+        });
+
+        // Validate form inputs before submission
+        function validateForm() {
+            // Get the password and confirm password values
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            // Get the error message element
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Check if the passwords match
+            if (password !== confirmPassword) {
+                errorMessage.style.display = 'block'; // Show the error message
+                errorMessage.textContent = 'Passwords do not match!'; // Set the error text
+                return false; // Prevent form submission
+            }
+
+            // Check if the password meets minimum length
+            if (password.length < 8) {
+                errorMessage.style.display = 'block'; // Show the error message
+                errorMessage.textContent = 'Password must be at least 8 characters!'; // Set the error text
+                return false; // Prevent form submission
+            }
+
+            // Hide the error message if validation passes
+            errorMessage.style.display = 'none';
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>

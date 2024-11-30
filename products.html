@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore various skills and exchange your knowledge on the Online Skill Exchange platform.">
+    <meta name="keywords" content="Explore Skills, Skill Exchange, Learn New Skills">
+    <title>Explore Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Explore Skills</h1>
+    </header>
+    <nav aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.html">Explore Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2>Available Skills</h2>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search for skills..." aria-label="Search for skills">
+            <button id="searchButton" class="btn">Search</button>
+        </div>
+
+        <!-- Skills List with Some details -->
+        <div class="skills-list">
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>Price: Free</p>
+                <p>Available From: December 2, 2024</p>
+                <p>Time Duration: 2 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+
+            <div class="skill-card">
+                <h3>Graphic Design</h3>
+                <p>Price: $150</p>
+                <p>Available From: January 5, 2025</p>
+                <p>Time Duration: 3 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Game Development</h3>
+                <p>Price: Free</p>
+                <p>Available From: February 1, 2025</p>
+                <p>Time Duration: 5 weeks</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>AI Creation</h3>
+                <p>Price: $200</p>
+                <p>Available From: March 15, 2025</p>
+                <p>Time Duration: 1 month</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Backend Development</h3>
+                <p>Price: Free</p>
+                <p>Available From: April 20, 2025</p>
+                <p>Time Duration: 2 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Cybersecurity</h3>
+                <p>Price: $300</p>
+                <p>Available From: May 10, 2025</p>
+                <p>Time Duration: 4 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Cloud Computing</h3>
+                <p>Price: $250</p>
+                <p>Available From: June 1, 2025</p>
+                <p>Time Duration: 6 weeks</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Python Programming</h3>
+                <p>Price: Free</p>
+                <p>Available From: July 15, 2025</p>
+                <p>Time Duration: 3 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>JAVA Programming</h3>
+                <p>Price: $100</p>
+                <p>Available From: August 10, 2025</p>
+                <p>Time Duration: 2 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Framework PHP</h3>
+                <p>Price: $180</p>
+                <p>Available From: September 1, 2025</p>
+                <p>Time Duration: 8 weeks</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Desktop Apps</h3>
+                <p>Price: Free</p>
+                <p>Available From: October 5, 2025</p>
+                <p>Time Duration: 3 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Microservices Architecture</h3>
+                <p>Price: $220</p>
+                <p>Available From: November 10, 2025</p>
+                <p>Time Duration: 6 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>TypeScript</h3>
+                <p>Price: $120</p>
+                <p>Available From: December 1, 2025</p>
+                <p>Time Duration: 5 weeks</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Cryptocurrency</h3>
+                <p>Price: Free</p>
+                <p>Available From: January 15, 2026</p>
+                <p>Time Duration: 1 month</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+            <div class="skill-card">
+                <h3>Databases</h3>
+                <p>Price: $50</p>
+                <p>Available From: February 1, 2026</p>
+                <p>Time Duration: 2 months</p>
+                <button class="join-skill-btn">Join this Skill</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Skill Exchange. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamic search functionality (filtering skills)
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const skillItems = document.querySelectorAll('.skill-item');
+
+            skillItems.forEach(item => {
+                const skillTitle = item.querySelector('h3').textContent.toLowerCase();
+                if (skillTitle.includes(searchQuery)) {
+                    item.style.display = 'block';  // Show matching skill
+                } else {
+                    item.style.display = 'none';  // Hide non-matching skill
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags: These help define the page for search engines and social media platforms -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description and keywords to help with SEO and give context to the page -->
+    <meta name="description" content="Login to your Online Skill Exchange account to access and manage your skills.">
+    <meta name="keywords" content="Login, Sign In, Skill Exchange, Online Learning">
+    <!-- The title displayed on the browser tab -->
+    <title>Login</title>
+    <!-- External CSS to style the page -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- External JavaScript file that will be loaded after the HTML is parsed -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section: Contains the main title of the page -->
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <!-- Navigation Bar: Links to other pages of the website for easy navigation -->
+    <nav aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="products.html">Explore Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Form Section: Form for users to input their credentials -->
+    <section class="form-section">
+        <!-- Section heading to clarify the page's purpose -->
+        <h2>Login Page</h2>
+        
+        <!-- Form where users input their login details. The form will not submit if the fields are empty -->
+        <form id="loginForm" autocomplete="off" onsubmit="return validateLoginForm()">
+            <!-- Email input field with required validation -->
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required aria-required="true" autocomplete="email">
+
+            <!-- Password input field with a toggle button to show/hide the password -->
+            <label for="loginPassword">Password:</label>
+            <div class="password-container">
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required aria-required="true" autocomplete="current-password">
+                <!-- Eye icon button that allows the user to toggle password visibility -->
+                <button type="button" id="toggleLoginPassword" class="eye-icon" aria-label="Show/Hide Password">&#128065;</button>
+            </div>
+
+            <!-- Submit button for the form to log the user in -->
+            <button type="submit">Login</button>
+
+            <!-- Error message that will show if the form validation fails -->
+            <p id="loginErrorMessage" class="error-message" style="display:none; color:red;"></p>
+        </form>
+    </section>
+
+    <!-- Footer Section: Displays copyright information -->
+    <footer>
+        <p>&copy; 2024 Online Skill Exchange. All rights reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript to handle form interactions -->
+    <script>
+        // JavaScript to toggle password visibility in the password field
+        document.getElementById('toggleLoginPassword').addEventListener('click', function() {
+            const loginPassword = document.getElementById('loginPassword');
+            if (loginPassword.type === 'password') {
+                // Change the input field to type 'text' to reveal the password
+                loginPassword.type = 'text';
+                this.innerHTML = '&#128065;';  // Change icon to show the "open eye" symbol
+            } else {
+                // Change the input field back to 'password' to hide it
+                loginPassword.type = 'password';
+                this.innerHTML = '&#128065;';  // Revert icon to "closed eye"
+            }
+        });
+
+        // Function to validate that both email and password fields are filled before submitting the form
+        function validateLoginForm() {
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorMessage = document.getElementById('loginErrorMessage');
+
+            // Check if any of the fields are empty
+            if (email === '' || password === '') {
+                errorMessage.style.display = 'block';  // Show the error message
+                errorMessage.textContent = 'Both fields are required!';  // Error message text
+                return false;  // Prevent form submission
+            }
+
+            // Hide error message if validation passes
+            errorMessage.style.display = 'none';
+            return true;  // Allow form submission
+        }
+    </script>
+</body>
+</html>
